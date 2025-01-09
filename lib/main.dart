@@ -1,3 +1,4 @@
+import 'package:englishlessons/pages/subjects.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -31,8 +32,6 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int selectedIndex = 1;
 
-
-
   @override
   Widget build(BuildContext context) {
 
@@ -42,7 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
     switch (selectedIndex) {
       case 0:
-        currentPage = const Text("tematy");
+        currentPage = const SubjectsPage();
         title = "tematy";
       case 1:
         currentPage = const Text("Nauka");
@@ -58,6 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(title),
       ),
+
 
       body: currentPage,
 
